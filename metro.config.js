@@ -1,6 +1,6 @@
 const { getDefaultConfig } = require("metro-config")
 const { getDefaultConfig: getDefaultExpoConfig } = require("@expo/metro-config")
-
+const path = require("path");
 let metroConfig
 let isExpo = false
 try {
@@ -32,13 +32,26 @@ if (isExpo) {
    */
   const { makeMetroConfig } = require("@rnx-kit/metro-config")
   const MetroSymlinksResolver = require("@rnx-kit/metro-resolver-symlinks")
-
+  
   metroConfig = (async () => {
     const defaultConfig = await getDefaultConfig()
     return makeMetroConfig({
       projectRoot: __dirname,
       // watchFolders: [`${__dirname}/../..`], // for monorepos
       resolver: {
+
+        extraNodeModules: {
+          crypto: path.resolve(
+            __dirname,
+            "./node_modules/react-native-crypto-polyfill"
+          ),
+          http: path.resolve(__dirname, "./node_modules/http-browserify"),
+          https: path.resolve(__dirname, "./node_modules/https-browserify"),
+          buffer: path.resolve(__dirname, "./node_modules/buffer"),
+          stream: path.resolve(__dirname, "./node_modules/stream-browserify"),
+          string_decoder: path.resolve(__dirname, "./node_modules/string_decoder"
+          ),
+      },
         /**
          * This custom resolver is for if you're using symlinks.
          *
