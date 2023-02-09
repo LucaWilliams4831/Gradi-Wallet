@@ -36,6 +36,8 @@
     "react-error-overlay": "6.0.9"
   },
   "dependencies": {
+    "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+    "@ethersproject/base64": "^5.7.0",
     "@expo-google-fonts/space-grotesk": "^0.2.2",
     "@expo/webpack-config": "^0.17.2",
     "@react-native-async-storage/async-storage": "~1.17.3",
@@ -46,6 +48,7 @@
     "@toruslabs/fetch-node-details": "^8.1.0",
     "@toruslabs/torus.js": "^6.3.2",
     "apisauce": "2.1.5",
+    "base-64": "^1.0.0",
     "crypto": "file:./crypto-polyfill",
     "date-fns": "^2.29.2",
     "expo": "^47.0.0",
@@ -66,6 +69,7 @@
     "mobx": "6.6.0",
     "mobx-react-lite": "3.4.0",
     "mobx-state-tree": "5.1.5",
+    "os-browserify": "^0.3.0",
     "react": "18.1.0",
     "react-native": "0.70.5",
     "react-native-bootsplash": "4.3.2",

@@ -48,9 +48,11 @@ if (isExpo) {
           http: path.resolve(__dirname, "./node_modules/http-browserify"),
           https: path.resolve(__dirname, "./node_modules/https-browserify"),
           buffer: path.resolve(__dirname, "./node_modules/buffer"),
+          atob: path.resolve(__dirname, "./node_modules/atob"),
           stream: path.resolve(__dirname, "./node_modules/stream-browserify"),
-          string_decoder: path.resolve(__dirname, "./node_modules/string_decoder"
-          ),
+          string_decoder: path.resolve(__dirname, "./node_modules/string_decoder"),
+          os: path.resolve(__dirname, "./node_modules/os-browserify")
+          
       },
         /**
          * This custom resolver is for if you're using symlinks.

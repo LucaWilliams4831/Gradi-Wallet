@@ -1,6 +1,11 @@
 // TODO: write documentation for colors and palette in own markdown file and add links from here
 
 const palette = {
+  cyan: "#888",
+  signbackground: "#184E77",
+  white: "#FFF",
+  blue: "#1a6e9a",
+
   neutral100: "#FFFFFF",
   neutral200: "#F4F2F1",
   neutral300: "#D7CEC9",
@@ -32,6 +37,7 @@ const palette = {
 
   angry100: "#F2D6CD",
   angry500: "#C03403",
+  lightgreen: "#34A0A4",
 
   overlay20: "rgba(25, 16, 21, 0.2)",
   overlay50: "rgba(25, 16, 21, 0.5)",
@@ -59,7 +65,9 @@ export const colors = {
   /**
    * The default color of the screen background.
    */
-  background: palette.neutral200,
+  background: palette.blue,
+
+  signbackground: palette.signbackground,
   /**
    * The default border color.
    */
@@ -81,4 +89,6 @@ export const colors = {
    *
    */
   errorBackground: palette.angry100,
+  white: palette.white,
+  buttonborder: palette.lightgreen
 }
